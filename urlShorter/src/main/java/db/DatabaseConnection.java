@@ -11,9 +11,14 @@ public class DatabaseConnection {
     //URL stores the JDBC connection URL, which tells Java where the MySQL database is located.
     private static final String USER = "nati";
     private static final String PASSWORD = "nati123";
-
+    //What it does: Stores the login credentials required by MySQL.
+    //Why it matters: MySQL requires authorization to grant access to the nati database.
+    
+    //need to understand code below
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
     //DriverManager.getConnection(...) attempts to connect using the URL, username, and password, then returns the Connection object.
+    
+    
 }

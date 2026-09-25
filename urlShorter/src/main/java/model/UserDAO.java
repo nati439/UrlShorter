@@ -12,6 +12,7 @@ public class UserDAO {
         String sql = "SELECT 1";
 
         try (Connection con = DatabaseConnection.getConnection();
+ //Calls your utility method to open a physical socket connection to MySQL.
              PreparedStatement stmt = con.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 
